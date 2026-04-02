@@ -68,6 +68,8 @@ func change_animation(key:StringName = _default_anim)->void:
 		var new_animation:AniKey = AniKey.new(key, timer)
 		_queue += [new_animation]
 func force_animation(key:StringName, one_shot:bool = false, duration:int = 20)->void:
+	var IN_SYS:InputSystem = World.get_system(InputSystem)
+	duration = int(IN_SYS.input_timer * 100)
 	var new_key:StringName = _prepare_animation(key)
 	if new_key == &'NONE':
 		push_warning("%s was attempted as a key at a force_animation." % key)

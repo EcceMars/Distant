@@ -14,7 +14,11 @@ func process()->void:
 	if input_timer > 0.0:
 		input_timer -= World.delta
 		return
-	if Input.is_action_just_released("attack01"):
+	if Input.is_action_just_released("jump"):
+		one_shot = &'jump'
+		input_timer = 1.2
+		return
+	if Input.is_action_just_released("attack"):
 		one_shot = &'attack0%d' % [0, 1, 2, 3, 4].pick_random()
 		velocity = Vector2.ZERO
 		input_timer = 0.2
