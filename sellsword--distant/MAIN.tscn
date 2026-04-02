@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bhxevsiwu777n"]
+
+[ext_resource type="Script" uid="uid://du1yrgb52crgc" path="res://MAIN.gd" id="1_0llpg"]
+[ext_resource type="SpriteFrames" uid="uid://tauneyuxeqhd" path="res://assets/animations/iphrit.tres" id="2_a1u8q"]
+
+[node name="MAIN" type="Node" unique_id=1218823405]
+script = ExtResource("1_0llpg")
+iphrit = ExtResource("2_a1u8q")
